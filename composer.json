@@ -1,13 +1,13 @@
 {
   "name": "ben-wecom4u/laravel-edit-mode",
-  "description": "",
+  "description": "Laravel edit mode",
   "keywords": [],
   "homepage": "",
   "license": "MIT",
   "authors": [
     {
-      "name": "",
-      "email": ""
+      "name": "Benjamin Grilleres",
+      "email": "bg@wecom4u.com"
     }
   ],
   "require": {
