@@ -22,6 +22,5 @@
     "psr-4": {
       "BenWecom4U\\Editor\\": "src/"
     }
-  },
-  "minimum-stability": "dev"
+  }
 }
