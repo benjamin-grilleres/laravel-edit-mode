@@ -70,7 +70,7 @@ class ServiceProvider extends LaravelServiceProvider {
 
     private function handleMigrations() {
 
-        $this->publishes([__DIR__ . '/../migrations' => base_path('database/migrations')]);
+        $this->publishes([__DIR__ . '/../database/migrations' => base_path('database/migrations')]);
     }
 
     private function handleRoutes() {
