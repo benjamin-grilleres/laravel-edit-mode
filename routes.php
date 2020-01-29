@@ -4,10 +4,13 @@
  * Your package routes would go here
  */
 
-Route::group(['middleware' => 'auth:api'], function () {
-    Route::post('editor','TextEditorController@store');
-});
+Route::group(['namespace' => 'BenWecom4U\Editor\Controllers'], function () {
+    Route::group(['middleware' => 'auth:api'], function () {
+        Route::post('editor','TextEditorController@store');
+    });
 
-/** Editor */
-Route::get('editor', 'TextEditorController@index')->middleware('vendor/spatie/laravel-responsecache/cacheResponse');
+    /** Editor */
+    Route::get('editor', 'TextEditorController@index');
+
+});
 
