@@ -15,9 +15,22 @@ class TestRoute extends TestCase
     {
         $router = $this->getRouter();
         // Visit /test and see "Test Laravel package isolated" on it
-        $response = $router->get('editor');
-        $response->assertStatus(200);
+        $response = $router->get('editor',$this->getRouteResponse());
+        var_dump($response);
+        //$response->assertStatus(200);
 
+    }
+
+    protected function getRouteResponse()
+    {
+        return function () {
+            return (new Response())->setContent('<html></html>');
+        };
+    }
+
+    protected function getLastRouteMiddlewareFromRouter($router)
+    {
+        return last($router->getRoutes()->get())->middleware();
     }
 
     protected function getRouter()
