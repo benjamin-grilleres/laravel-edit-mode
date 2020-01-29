@@ -2,7 +2,7 @@
   "name": "ben-wecom4u/laravel-edit-mode",
   "description": "Laravel edit mode",
   "keywords": [],
-  "homepage": "",
+  "homepage": "https://github.com/ben-wecom4u/laravel-edit-mode",
   "license": "MIT",
   "authors": [
     {
@@ -11,14 +11,34 @@
     }
   ],
   "require": {
-    "php": ">=7.0.0"
-  },
-  "require-dev": {
-    "phpunit/phpunit": "~4.0"
+    "php": ">=7.0.0",
+    "spatie/laravel-responsecache": "^6.3"
   },
   "autoload": {
     "psr-4": {
       "BenWecom4U\\Editor\\": "src/"
     }
+  },
+
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+
+  "extra": {
+    "laravel": {
+      "providers": [
+        "BenWecom4U\\Editor\\ServiceProvider"
+      ]
+    }
+  },
+  "scripts": {
+    "test": "phpunit"
+  },
+
+  "require-dev": {
+    "phpunit/phpunit": "^8",
+    "orchestra/testbench": "^4.5"
   }
 }

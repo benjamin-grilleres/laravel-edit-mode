@@ -9,5 +9,5 @@ Route::group(['middleware' => 'auth:api'], function () {
 });
 
 /** Editor */
-Route::get('editor', 'TextEditorController@index')->middleware('cacheResponse');
+Route::get('editor', 'TextEditorController@index')->middleware('vendor/spatie/laravel-responsecache/cacheResponse');
 
